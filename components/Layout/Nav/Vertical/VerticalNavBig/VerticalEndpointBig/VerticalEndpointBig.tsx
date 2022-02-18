@@ -1,4 +1,4 @@
-import classes from "./VerticalEndPointBig.module.css";
+import classes from "./VerticalEndpointBig.module.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
