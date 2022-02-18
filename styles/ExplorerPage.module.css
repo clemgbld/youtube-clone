@@ -21,3 +21,9 @@
     padding-left: 5rem;
   }
 }
+
+@media (max-width: 23.1em) {
+  .container {
+    padding-left: 1.5rem;
+  }
+}

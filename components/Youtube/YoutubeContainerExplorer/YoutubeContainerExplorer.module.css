@@ -23,3 +23,15 @@
     grid-template-columns: repeat(3, 21rem);
   }
 }
+
+@media (max-width: 46.7em) {
+  .grid {
+    grid-template-columns: repeat(2, 21rem);
+  }
+}
+
+@media (max-width: 35.85em) {
+  .grid {
+    grid-template-columns: repeat(2, 15rem);
+  }
+}

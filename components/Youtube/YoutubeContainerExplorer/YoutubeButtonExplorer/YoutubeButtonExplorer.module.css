@@ -27,3 +27,12 @@
 .active {
   background: #767676;
 }
+
+@media (max-width: 35.85em) {
+  .btn,
+  .active {
+    width: 15rem;
+    height: 9rem;
+    gap: 1rem;
+  }
+}
