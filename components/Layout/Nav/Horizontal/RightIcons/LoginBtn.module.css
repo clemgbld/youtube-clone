@@ -1,0 +1,39 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 10.8rem;
+  height: 4.1rem;
+  border: 1px solid #3ea6ff;
+  border-radius: 2px;
+  color: #3ea6ff;
+  background: transparent;
+  font-size: 1.4rem;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.icon {
+  font-size: 1.8rem;
+}
+
+.text {
+  font-weight: 600;
+}
+
+.profile-picture {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+}
+
+@media (max-width: 39.94em) {
+  .btn {
+    width: 4.1rem;
+  }
+
+  .text {
+    display: none;
+  }
+}

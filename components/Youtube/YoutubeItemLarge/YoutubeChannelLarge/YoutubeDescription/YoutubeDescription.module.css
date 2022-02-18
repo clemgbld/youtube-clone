@@ -1,0 +1,13 @@
+.description {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  background: transparent;
+  font-size: 1.6rem;
+  color: #767676;
+  cursor: pointer;
+}

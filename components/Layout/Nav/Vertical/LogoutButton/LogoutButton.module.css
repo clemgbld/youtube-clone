@@ -1,0 +1,52 @@
+.logout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #767676;
+  gap: 0.5rem;
+  width: 7.2rem;
+  height: 7.4rem;
+  border: none;
+  color: #fff;
+  background: transparent;
+  cursor: pointer;
+}
+
+.logout:hover {
+  background: #383838;
+}
+
+.icon,
+.icon-large {
+  font-size: 2.4rem;
+}
+
+.logout-large {
+  width: 24rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #767676;
+  gap: 2rem;
+  font-size: 1.4rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.logout-large:hover {
+  background-color: #5555;
+}
+
+.icon-large {
+  margin-left: 2.4rem;
+}
+
+@media (max-width: 33.5em) {
+  .logout-large {
+    width: 7rem;
+  }
+
+  .logout-large p {
+    display: none;
+  }
+}

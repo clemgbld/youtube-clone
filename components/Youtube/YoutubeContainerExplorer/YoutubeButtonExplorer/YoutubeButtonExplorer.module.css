@@ -1,0 +1,29 @@
+.btn,
+.active {
+  border: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding-left: 2rem;
+  width: 21rem;
+  height: 11.6rem;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn {
+  background: #303030;
+}
+
+.btn:hover {
+  background: #767676;
+}
+
+.active {
+  background: #767676;
+}

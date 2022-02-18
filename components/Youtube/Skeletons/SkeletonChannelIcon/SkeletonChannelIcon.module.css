@@ -1,0 +1,20 @@
+.img-extra-large,
+.error-extra-large {
+  width: 8rem;
+  height: 8rem;
+}
+
+.img {
+  width: 3.6rem;
+  height: 3.6rem;
+}
+
+.img-large {
+  width: 5rem;
+  height: 5rem;
+}
+
+.img-small {
+  width: 2.4rem;
+  height: 2.4rem;
+}

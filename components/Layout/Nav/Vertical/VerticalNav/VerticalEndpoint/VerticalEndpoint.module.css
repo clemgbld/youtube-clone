@@ -1,0 +1,16 @@
+.endpoint {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 7.2rem;
+  height: 7.4rem;
+  border: none;
+  color: #fff;
+  background: transparent;
+}
+
+.endpoint:hover {
+  background: #383838;
+}

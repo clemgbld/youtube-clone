@@ -1,0 +1,52 @@
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon,
+.icon-comment {
+  color: #fff;
+}
+
+.icon {
+  font-size: 2.4rem;
+}
+
+.count {
+  font-size: 1.6rem;
+}
+
+.icon-comment {
+  font-size: 1.4rem;
+}
+
+.count-comment {
+  font-size: 1.4rem;
+}
+
+@media (max-width: 91.75em) {
+  .flex {
+    gap: 0.7rem;
+  }
+
+  .icon {
+    font-size: 2rem;
+  }
+  .count {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 28em) {
+  .flex {
+    gap: 0.4rem;
+  }
+
+  .icon {
+    font-size: 1.6rem;
+  }
+  .count {
+    font-size: 1.1rem;
+  }
+}

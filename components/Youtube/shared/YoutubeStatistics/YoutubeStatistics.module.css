@@ -1,0 +1,22 @@
+.statistics,
+.statistics-small,
+.statistics-large {
+  color: #767676;
+}
+
+.statistics,
+.statistics-large {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.statistics-small {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+@media (max-width: 28em) {
+  .statistics-large {
+    font-size: 1rem;
+  }
+}

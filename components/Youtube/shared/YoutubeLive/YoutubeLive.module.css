@@ -1,0 +1,11 @@
+.live {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 14rem;
+  padding: 0.5rem;
+  border: 1px solid #ff4e45;
+  color: #ff4e45;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}

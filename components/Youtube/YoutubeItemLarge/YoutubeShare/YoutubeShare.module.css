@@ -1,0 +1,90 @@
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 2.4rem;
+  color: #fff;
+}
+
+.share {
+  font-size: 1.6rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  font-size: 1.6rem;
+}
+
+.copy-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #767676;
+  background-color: #0f0f0f;
+  height: 4rem;
+}
+
+.copy-container::after {
+  position: absolute;
+  bottom: -100%;
+  left: -0.4%;
+  content: "";
+  width: 100%;
+  height: 0.5px;
+  background: #767676;
+}
+
+.input {
+  width: 70%;
+  border: none;
+  background: transparent;
+  color: #fff;
+}
+
+.copy {
+  border: none;
+  background: transparent;
+  font-size: 1.4rem;
+  color: #3ea6ff;
+  cursor: pointer;
+}
+
+@media (max-width: 91.75em) {
+  .flex {
+    gap: 0.7rem;
+  }
+
+  .icon {
+    font-size: 2rem;
+  }
+  .share {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 28em) {
+  .flex {
+    gap: 0.4rem;
+  }
+
+  .icon {
+    font-size: 1.6rem;
+  }
+  .share {
+    font-size: 1.1rem;
+  }
+}

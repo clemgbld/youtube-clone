@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #767676;
+  padding: 1rem 0;
+  margin-bottom: 1.6rem;
+}
+
+.flex-child {
+  align-self: flex-end;
+  display: flex;
+  gap: 3rem;
+  cursor: pointer;
+}
+
+@media (max-width: 120.2em) {
+  .big-container {
+    width: 106.5rem;
+  }
+}
+
+@media (max-width: 106.9em) {
+  .big-container {
+    width: 90.1rem;
+  }
+}
+
+@media (max-width: 91.75em) {
+  .big-container {
+    width: 72.1rem;
+  }
+  .flex-child {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 77.45em) {
+  .big-container {
+    width: 57.7rem;
+  }
+}
+
+@media (max-width: 28em) {
+  .big-container {
+    width: 40.39rem;
+  }
+
+  .flex-child {
+    gap: 1rem;
+  }
+}

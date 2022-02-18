@@ -1,0 +1,42 @@
+.title,
+.title-large,
+.title-extra-large {
+  margin-bottom: 1rem;
+}
+
+.title,
+.title-small {
+  color: #767676;
+}
+
+.title,
+.title-comment {
+  font-size: 1.4rem;
+}
+
+.title-large {
+  font-size: 1.6rem;
+}
+
+.title-small {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.title,
+.title-large,
+.title-small {
+  transition: all 0.3s ease-in-out;
+}
+
+.title:hover,
+.title-small:hover,
+.title-large:hover,
+.title-comment {
+  color: #fff;
+  cursor: pointer;
+}
+
+.title-extra-large {
+  font-size: 2rem;
+}

@@ -1,0 +1,84 @@
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+
+.icon {
+  font-size: 2.4rem;
+  color: #fff;
+}
+
+.icon-container-small,
+.icon-container-small-saved,
+.icon-container-small::before,
+.icon-container-small-saved::before {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  border-radius: 2px;
+}
+
+.icon-container-small,
+.icon-container-small-saved {
+  display: flex;
+  top: 1%;
+  right: 1%;
+  width: 3rem;
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.icon-container-small:hover,
+.icon-container-small::before,
+.icon-container-small-saved::before {
+  background: rgba(0, 0, 0);
+}
+
+.icon-container-small::before,
+.icon-container-small-saved::before {
+  left: -11.5rem;
+  display: none;
+  width: 9rem;
+  padding: 0 1rem 0 1rem;
+  font-size: 1.2rem;
+}
+
+.icon-container-small::before {
+  content: "WATCH LATER";
+}
+
+.icon-container-small-saved::before {
+  content: "SAVED";
+}
+
+.icon-container-small:hover::before,
+.icon-container-small-saved:hover::before {
+  display: flex;
+}
+
+@media (max-width: 91.75em) {
+  .flex {
+    gap: 0.7rem;
+    font-size: 1.4rem;
+  }
+
+  .icon {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 28em) {
+  .flex {
+    gap: 0.4rem;
+    font-size: 1.1rem;
+  }
+
+  .icon {
+    font-size: 1.6rem;
+  }
+}

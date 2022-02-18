@@ -1,0 +1,29 @@
+.endpoint,
+.endpoint-active {
+  width: 24rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.4rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.endpoint:hover {
+  background-color: #5555;
+}
+
+.endpoint-active {
+  background-color: #767676;
+}
+
+.endpoint-active:hover {
+  background-color: #898989;
+}
+
+@media (max-width: 33.5em) {
+  .endpoint,
+  .endpoint-active {
+    width: 7rem;
+  }
+}

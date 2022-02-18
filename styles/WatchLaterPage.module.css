@@ -1,0 +1,16 @@
+.container,
+.container-center {
+  background-color: #0f0f0f;
+  height: 100vh;
+}
+
+.container-center {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.6rem;
+}
+
+.no-videos {
+  font-size: 1.6rem;
+  font-weight: 600;
+}

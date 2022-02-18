@@ -1,0 +1,11 @@
+.flex {
+  cursor: pointer;
+  display: flex;
+  gap: 0.7rem;
+}
+
+.channel {
+  cursor: pointer;
+}
+
+

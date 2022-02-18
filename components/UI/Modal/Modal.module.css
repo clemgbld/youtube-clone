@@ -1,0 +1,44 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  padding: 3rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 51.8rem;
+  height: 32.9rem;
+  z-index: 1001;
+  background: #212121;
+}
+
+.close {
+  position: absolute;
+  top: 4%;
+  right: 2%;
+  font-size: 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  z-index: 1002;
+}
+
+.close:hover {
+  color: #868e96;
+}
+
+@media (max-width: 28em) {
+  .modal {
+    width: 47rem;
+    height: 29rem;
+  }
+}

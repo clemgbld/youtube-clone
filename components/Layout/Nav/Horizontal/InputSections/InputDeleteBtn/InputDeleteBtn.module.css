@@ -1,0 +1,11 @@
+.close {
+  position: absolute;
+  font-size: 2rem;
+  top: 24%;
+  right: 2%;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #767676;
+}

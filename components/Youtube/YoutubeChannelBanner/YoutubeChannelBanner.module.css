@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-bottom: 1.6rem;
+  width: 100%;
+  height: 12.8rem;
+  padding: 1.6rem 19rem 0.4rem 19rem;
+  background: #181818;
+  transform: translateY(-5.7rem);
+}
+
+@media (max-width: 100em) {
+  .container {
+    padding-left: 15rem;
+  }
+}
+
+@media (max-width: 84em) {
+  .container {
+    padding-left: 10rem;
+  }
+}
+
+@media (max-width: 63em) {
+  .container {
+    padding-left: 8rem;
+  }
+}
+
+@media (max-width: 45em) {
+  .container {
+    padding-left: 4rem;
+  }
+}

@@ -1,0 +1,24 @@
+.layout,
+.layout-bignav {
+  padding-top: 11.2rem;
+}
+
+.layout {
+  padding-left: 7.2rem;
+}
+
+.layout-bignav {
+  padding-left: 24rem;
+}
+
+@media (max-width: 37.75em) {
+  .layout {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 33.5em) {
+  .layout-bignav {
+    padding-left: 7rem;
+  }
+}

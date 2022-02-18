@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.6rem;
+  padding-left: 2rem;
+}
+
+.container ::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  -ms-overflow-style: none;
+}

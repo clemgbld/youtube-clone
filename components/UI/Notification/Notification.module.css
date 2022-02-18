@@ -1,0 +1,27 @@
+.notification {
+  position: fixed;
+  left: 1%;
+  bottom: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #212121;
+  width: 28.8rem;
+  height: 4.8rem;
+  z-index: 1003;
+  animation: showNotification 0.5s linear ease-in-out;
+}
+
+@keyframes showNotification {
+  0% {
+    bottom: -100%;
+  }
+
+  100% {
+    bottom: 10%;
+  }
+}
+
+.text {
+  font-size: 1.6rem;
+}

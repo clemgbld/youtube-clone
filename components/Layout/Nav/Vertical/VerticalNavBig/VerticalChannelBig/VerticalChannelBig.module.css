@@ -1,0 +1,48 @@
+.endpoint,
+.endpoint-active {
+  padding-right: 2rem;
+  width: 24rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.4rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.endpoint:hover {
+  background-color: #5555;
+}
+
+.endpoint-active {
+  background-color: #767676;
+}
+
+.endpoint-active:hover {
+  background-color: #898989;
+}
+
+.justify {
+  margin-left: 2.4rem;
+}
+
+.icon {
+  justify-self: flex-end;
+  font-size: 1.6rem;
+  color: #ff0000;
+  margin-left: auto;
+}
+
+@media (max-width: 33.5em) {
+  .endpoint,
+  .endpoint-active {
+    width: 7rem;
+  }
+  .title {
+    display: none;
+  }
+
+  .icon {
+    display: none;
+  }
+}

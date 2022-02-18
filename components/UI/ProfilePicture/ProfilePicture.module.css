@@ -1,0 +1,21 @@
+.profile-picture,
+.profile-picture-big {
+  border-radius: 50%;
+}
+
+.profile-picture {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.profile-picture-big {
+  width: 4.8rem;
+  height: 4.8rem;
+}
+
+@media (max-width: 52.25em) {
+  .profile-picture-big {
+    width: 3.4rem;
+    height: 3.4rem;
+  }
+}

@@ -1,0 +1,24 @@
+
+  
+  .img,
+  .img-small,
+  .img-channel {
+    margin-bottom: 1rem;
+  }
+  
+  .img {
+    width: 32rem;
+    height: 18rem;
+  }
+  
+  .img-channel {
+    width: 21rem;
+    height: 11.8rem;
+  }
+  
+  .img-small {
+    width: 16.8rem;
+    height: 9.4rem;
+  }
+  
+  

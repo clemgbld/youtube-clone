@@ -1,0 +1,38 @@
+.title,
+.title-large,
+.title-search,
+.title-playlist {
+  margin-bottom: 1rem;
+}
+
+.title,
+.title-search,
+.title-playlist {
+  font-size: 1.6rem;
+}
+
+.title {
+  width: 27.2rem;
+}
+
+.title-large {
+  font-size: 1.8rem;
+  padding-right: 0.5rem;
+}
+
+.title-small {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+}
+
+@media (max-width: 78.9em) {
+  .title-playlist {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 43.7em) {
+  .title-playlist {
+    font-size: 1.2rem;
+  }
+}

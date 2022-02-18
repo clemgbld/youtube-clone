@@ -1,0 +1,30 @@
+.img,
+.img-large,
+.img-small,
+.img-extra-large {
+  border-radius: 50%;
+}
+
+.img-extra-large,
+.error-extra-large {
+  width: 8rem;
+  height: 8rem;
+}
+
+.img {
+  width: 3.6rem;
+  height: 3.6rem;
+  cursor: pointer;
+}
+
+.img-large {
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+}
+
+.img-small {
+  width: 2.4rem;
+  height: 2.4rem;
+  cursor: pointer;
+}

@@ -1,0 +1,7 @@
+.infinite ::-webkit-scrollbar {
+  display: none;
+}
+
+.infinite {
+  -ms-overflow-style: none;
+}

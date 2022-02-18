@@ -1,0 +1,24 @@
+.flex,
+.flex-small,
+.flex-like {
+  display: flex;
+}
+
+.flex-small,
+.flex-like {
+  margin-bottom: 1rem;
+}
+
+.flex {
+  gap: 1rem;
+  margin-bottom: 2.4rem;
+  padding-right: 1rem;
+}
+
+.flex-small {
+  gap: 0.5rem;
+}
+
+.flex-like {
+  gap: 1rem;
+}

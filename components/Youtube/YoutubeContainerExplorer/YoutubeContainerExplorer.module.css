@@ -1,0 +1,25 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 21rem);
+  column-gap: 0.5rem;
+  row-gap: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 100em) {
+  .grid {
+    grid-template-columns: repeat(5, 21rem);
+  }
+}
+
+@media (max-width: 78.2em) {
+  .grid {
+    grid-template-columns: repeat(4, 21rem);
+  }
+}
+
+@media (max-width: 51.5em) {
+  .grid {
+    grid-template-columns: repeat(3, 21rem);
+  }
+}

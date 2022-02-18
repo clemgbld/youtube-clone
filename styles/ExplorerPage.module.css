@@ -1,0 +1,23 @@
+.container {
+  padding-left: 10rem;
+}
+
+.container ::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  -ms-overflow-style: none;
+}
+
+.related {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 51.5em) {
+  .container {
+    padding-left: 5rem;
+  }
+}

@@ -1,0 +1,45 @@
+.header {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 5.6rem;
+  left: 0;
+  width: 24rem;
+  height: 100%;
+  background-color: rgba(48, 48, 48, 0.95);
+  z-index: 99;
+
+  padding-top: 2rem;
+  cursor: pointer;
+}
+
+.title-container {
+  display: flex;
+  height: 4rem;
+  align-items: center;
+  border-top: 1px solid #767676;
+}
+
+.title {
+  margin-left: 2.4rem;
+  color: #767676;
+  font-size: 1.6rem;
+}
+
+@media (max-width: 33.5em) {
+  .header {
+    width: 7rem;
+  }
+
+  .title-container {
+    display: none;
+  }
+
+  .title {
+    display: none;
+  }
+
+  .icon-title {
+    display: none;
+  }
+}

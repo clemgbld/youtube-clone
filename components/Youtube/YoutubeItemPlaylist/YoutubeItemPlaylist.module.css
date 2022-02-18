@@ -1,0 +1,59 @@
+.flex,
+.flex-big,
+.icon-container {
+  display: flex;
+}
+
+.flex-big,
+.icon-container {
+  transition: all 0.3s ease-in-out;
+}
+
+.flex,
+.flex-big {
+  gap: 1rem;
+}
+
+.flex-big {
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.6rem 1.6rem 1.6rem 0;
+  border-bottom: 1px solid #767676;
+  padding-left: 35.6rem;
+
+  cursor: pointer;
+}
+
+.flex-big:hover {
+  background-color: #5555;
+}
+
+.icon-container {
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.icon-container:hover {
+  background-color: #0f0f0f;
+}
+
+.icon {
+  font-size: 2.4rem;
+  align-self: center;
+}
+
+@media (max-width: 78.9em) {
+  .flex-big {
+    padding-left: 27.34rem;
+  }
+}
+
+@media (max-width: 52.25em) {
+  .flex-big {
+    padding-left: 1rem;
+  }
+}

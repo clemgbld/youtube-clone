@@ -1,0 +1,23 @@
+.header {
+  position: fixed;
+  top: 5.6rem;
+  left: 0;
+  width: 7.2rem;
+  height: 100%;
+  background: rgba(48, 48, 48, 0.8);
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.icon {
+  font-size: 2.4rem;
+}
+
+@media (max-width: 37.75em) {
+  .header {
+    display: none;
+  }
+}

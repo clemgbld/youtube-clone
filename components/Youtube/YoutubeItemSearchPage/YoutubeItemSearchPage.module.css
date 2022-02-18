@@ -1,0 +1,19 @@
+.flex {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.flex-channel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.6rem;
+}
+
+@media (max-width: 48.4em) {
+  .flex {
+    display: block;
+  }
+}

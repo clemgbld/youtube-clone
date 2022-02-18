@@ -1,0 +1,10 @@
+.btn {
+  width: 100%;
+  height: 4rem;
+  background: transparent;
+  border: 1px solid #3ea6ff;
+  color: #3ea6ff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}

@@ -1,0 +1,11 @@
+.description {
+  font-size: 1.2rem;
+  color: #767676;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 48.4em) {
+  .description {
+    display: none;
+  }
+}

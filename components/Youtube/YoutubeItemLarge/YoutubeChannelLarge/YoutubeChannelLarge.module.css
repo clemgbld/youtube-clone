@@ -1,0 +1,38 @@
+.flex {
+  display: flex;
+  gap: 1rem;
+  width: 125.2rem;
+  border-bottom: 1px solid #767676;
+  padding-bottom: 1rem;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 120.2em) {
+  .flex {
+    width: 106.5rem;
+  }
+}
+
+@media (max-width: 106.9em) {
+  .flex {
+    width: 90.1rem;
+  }
+}
+
+@media (max-width: 91.75em) {
+  .flex {
+    width: 72.1rem;
+  }
+}
+
+@media (max-width: 77.45em) {
+  .flex {
+    width: 57.7rem;
+  }
+}
+
+@media (max-width: 28em) {
+  .flex {
+    width: 40.39rem;
+  }
+}
