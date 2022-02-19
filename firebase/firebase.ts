@@ -1,6 +1,5 @@
 import { initializeApp, getApp, getApps, FirebaseApp } from "firebase/app";
 
-
 let app: FirebaseApp;
 
 const firebaseConfig = {

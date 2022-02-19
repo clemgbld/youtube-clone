@@ -8,6 +8,7 @@ import classes from "../styles/Home.module.css";
 import { useBigNav } from "../store/nav";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Spinner from "../components/UI/Spinner/Spinner";
+import Head from "next/head";
 
 const HomePage: React.FC<{
   youtube: InferGetStaticPropsType<typeof getStaticProps>;
@@ -40,17 +41,26 @@ const HomePage: React.FC<{
     : classes.container;
 
   return (
-    <InfiniteScroll
-      className={classContainer}
-      dataLength={items.length}
-      next={nextPageHandler}
-      hasMore={true}
-      loader={<Spinner />}
-    >
-      {items.map((item: Item) => (
-        <YoutubeItem key={item.id} item={item} />
-      ))}
-    </InfiniteScroll>
+    <>
+      <Head>
+        <title>Youtube-Clone</title>
+        <meta
+          name="description"
+          content="Enjoy videos and music that you like, and share it with your family, friends and the world thanks to this youtube clone."
+        />
+      </Head>
+      <InfiniteScroll
+        className={classContainer}
+        dataLength={items.length}
+        next={nextPageHandler}
+        hasMore={true}
+        loader={<Spinner />}
+      >
+        {items.map((item: Item) => (
+          <YoutubeItem key={item.id} item={item} />
+        ))}
+      </InfiniteScroll>
+    </>
   );
 };
 

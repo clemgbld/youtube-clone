@@ -9,6 +9,7 @@ import YoutubeItemSearchPage from "../../components/Youtube/YoutubeItemSearchPag
 import { ItemSearch } from "../../interface/youtubeItemInterface";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Spinner from "../../components/UI/Spinner/Spinner";
+import Head from "next/head";
 const ExplorerPage = () => {
   const { searchTerm } = useExplorer();
 
@@ -49,6 +50,13 @@ const ExplorerPage = () => {
 
   return (
     <div className={classes.container}>
+      <Head>
+        <title>{`Explorer - ${searchTerm} - Youtube-Clone`}</title>
+        <meta
+          name="description"
+          content="Find pages · Creator and artists to discover · Trendy videos on Youtube-clone "
+        />
+      </Head>
       {error && !data && <p>{error}</p>}
       <YoutubeContainerExplorer />
       <h3 className={classes.related}>{`Videos related to ${searchTerm}`}</h3>

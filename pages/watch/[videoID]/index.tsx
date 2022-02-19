@@ -6,6 +6,7 @@ import YoutubeItemLarge from "../../../components/Youtube/YoutubeItemLarge/Youtu
 import YoutubeSideList from "../../../components/Youtube/YoutubeSideList/YoutubeSideList";
 import { transformTitleInSearchTerm } from "../../../helpers/transformTitleInSearchTerm";
 import YoutubeComments from "../../../components/Youtube/YoutubeComments/YoutubeComments";
+import Head from "next/head";
 
 const WatchPage: React.FC = () => {
   const router = useRouter();
@@ -39,6 +40,9 @@ const WatchPage: React.FC = () => {
 
   return (
     <div className={classes.container}>
+      <Head>
+        <title>{`${title} - Youtube-Clone`}</title>
+      </Head>
       {error && !data && <p>{error}</p>}
       <div>
         {videoId && (

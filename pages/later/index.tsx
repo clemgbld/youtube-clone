@@ -4,6 +4,7 @@ import { LaterTransformed } from "../../interface/laterInterface";
 import { useFireBase } from "../../hooks/use-firebase";
 import YoutubeSideBar from "../../components/Youtube/YoutubeSideBar/YoutubeSideBar";
 import YoutubeItemPlaylist from "../../components/Youtube/YoutubeItemPlaylist/YoutubeItemPlaylist";
+import Head from "next/head";
 
 const WatchLaterPage: React.FC = () => {
   const [dependancy, setDependancy] = useState("");
@@ -19,6 +20,13 @@ const WatchLaterPage: React.FC = () => {
 
   return (
     <div className={classContainer}>
+      <Head>
+        <title>Watch Later - Youtube-Clone</title>
+        <meta
+          name="description"
+          content="Enjoy videos and music that you like, and share it with your family, friends and the world thanks to this youtube clone."
+        />
+      </Head>
       {error && !data && <p>{error}</p>}
       {data?.length < 1 && (
         <p className={classes["no-videos"]}>

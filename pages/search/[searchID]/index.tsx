@@ -8,6 +8,7 @@ import { ItemSearch } from "../../../interface/youtubeItemInterface";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Spinner from "../../../components/UI/Spinner/Spinner";
 import { loadMoreYoutubePages } from "../../../api/YoutubeApi/loadMoreYoutubePages";
+import Head from "next/head";
 
 const SearchPage: React.FC = () => {
   const [items, setItems] = useState<ItemSearch[]>([]);
@@ -35,7 +36,6 @@ const SearchPage: React.FC = () => {
 
     if (searchTerm) {
       setItems(data?.items);
-     
     }
   }, [data, searchTerm]);
 
@@ -52,6 +52,9 @@ const SearchPage: React.FC = () => {
 
   return (
     <>
+      <Head>
+        <title>{`${searchTerm} - Youtube-Clone`}</title>
+      </Head>
       {error && !data && <p>{error}</p>}
       {items?.length > 0 && data && (
         <div className={classes.container}>

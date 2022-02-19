@@ -9,6 +9,7 @@ import { ItemSearch } from "../../interface/youtubeItemInterface";
 import { loadMoreYoutubePages } from "../../api/YoutubeApi/loadMoreYoutubePages";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Spinner from "../../components/UI/Spinner/Spinner";
+import Head from "next/head";
 
 const TagsPage: React.FC = () => {
   const [items, setItems] = useState<ItemSearch[]>([]);
@@ -53,22 +54,31 @@ const TagsPage: React.FC = () => {
   };
 
   return (
-    <InfiniteScroll
-      dataLength={items?.length}
-      next={() =>
-        loadMoreYoutubePages(paramsNext, "search", setItems, setNextPageToken)
-      }
-      hasMore={true}
-      loader={<Spinner />}
-      className={classContainer}
-    >
-      {error && !data && <p>{error}</p>}
-      {items &&
-        items.length > 0 &&
-        items.map((item: ItemSearch, index: number) => (
-          <YoutubeItemTag key={index} item={item} />
-        ))}
-    </InfiniteScroll>
+    <>
+      <Head>
+        <title>Youtube-Clone</title>
+        <meta
+          name="description"
+          content="Enjoy videos and music that you like, and share it with your family, friends and the world thanks to this youtube clone."
+        />
+      </Head>
+      <InfiniteScroll
+        dataLength={items?.length}
+        next={() =>
+          loadMoreYoutubePages(paramsNext, "search", setItems, setNextPageToken)
+        }
+        hasMore={true}
+        loader={<Spinner />}
+        className={classContainer}
+      >
+        {error && !data && <p>{error}</p>}
+        {items &&
+          items.length > 0 &&
+          items.map((item: ItemSearch, index: number) => (
+            <YoutubeItemTag key={index} item={item} />
+          ))}
+      </InfiniteScroll>
+    </>
   );
 };
 
