@@ -1,11 +1,10 @@
 import apiFirebase from "./apiFirebase";
 import { Later } from "../../interface/laterInterface";
 
-export const postFirebase = async (obj: Later) => {
+export const postFirebase = async (obj: Later, uid: string | undefined) => {
   try {
-    const res = await apiFirebase.post("/later.json", obj);
+    const res = await apiFirebase.post(`/later/${uid}.json`, obj);
 
-    console.log(res);
   } catch (err) {
     console.log(err);
   }

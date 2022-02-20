@@ -8,6 +8,7 @@ import YoutubeLike from "../shared/YoutubeLike/YoutubeLike";
 import YoutubeDislike from "../shared/YoutubeDislike/YoutubeDislike";
 import YoutubeShare from "./YoutubeShare/YoutubeShare";
 import YoutubeWatchLater from "../shared/YoutubeWatchLater/YoutubeWatchLater";
+import { useAuth } from "../../../store/auth";
 
 const YoutubeItemLarge: React.FC<{ data: Item }> = ({ data }) => {
   const size = "large";
@@ -29,6 +30,8 @@ const YoutubeItemLarge: React.FC<{ data: Item }> = ({ data }) => {
     cTitle: channelTitle,
   };
 
+  const { user } = useAuth();
+
   return (
     <div className={classes["big-container"]}>
       {tags && <YoutubeTagTitles tags={tags} />}
@@ -48,7 +51,7 @@ const YoutubeItemLarge: React.FC<{ data: Item }> = ({ data }) => {
             <YoutubeLike likeCount={likeCount} type={size} />
             <YoutubeDislike type={size} />
             <YoutubeShare />
-            <YoutubeWatchLater obj={obj} isImage={false} />
+            {user && <YoutubeWatchLater obj={obj} isImage={false} />}
           </div>
         )}
       </div>

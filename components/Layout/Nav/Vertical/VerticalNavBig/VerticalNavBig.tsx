@@ -5,6 +5,7 @@ import CompassIcon from "../../../../UI/VerticalIcons/CompassIcon";
 import ClockIcon from "../../../../UI/VerticalIcons/ClockIcon";
 import LogoutButton from "../LogoutButton/LogoutButton";
 import VerticalChannelBig from "./VerticalChannelBig/VerticalChannelBig";
+import { useAuth } from "../../../../../store/auth";
 
 const data = [
   {
@@ -61,6 +62,8 @@ const data = [
 ];
 
 const VerticalNavBig: React.FC = () => {
+  const { user } = useAuth();
+
   return (
     <header className={classes.header}>
       <VerticalEndPointBig href="/" href2="/tags">
@@ -72,10 +75,12 @@ const VerticalNavBig: React.FC = () => {
         <CompassIcon />
         <p className={classes["icon-title"]}>Explorer</p>
       </VerticalEndPointBig>
-      <VerticalEndPointBig href="/later">
-        <ClockIcon />
-        <p className={classes["icon-title"]}>Watch later</p>
-      </VerticalEndPointBig>
+      {user && (
+        <VerticalEndPointBig href="/later">
+          <ClockIcon />
+          <p className={classes["icon-title"]}>Watch later</p>
+        </VerticalEndPointBig>
+      )}
       <div className={classes["title-container"]}>
         <h3 className={classes.title}>Channel you might like</h3>
       </div>

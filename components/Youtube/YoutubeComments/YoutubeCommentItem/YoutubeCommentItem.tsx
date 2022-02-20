@@ -28,8 +28,6 @@ const YoutubeCommentItem: React.FC<{ item: ItemComment }> = ({ item }) => {
   const comment = item.snippet.topLevelComment.snippet.textOriginal;
   const replies = item.replies?.comments;
 
-  console.log(replies);
-
   const type = "comment";
 
   const toggleBtnHandler = () => {

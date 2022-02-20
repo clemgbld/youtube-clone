@@ -9,6 +9,7 @@ import { HiOutlineMenuAlt4 } from "react-icons/hi";
 import { AiOutlineDelete } from "react-icons/ai";
 import { LaterTransformed } from "../../../interface/laterInterface";
 import { useRouter } from "next/router";
+import { useAuth } from "../../../store/auth";
 import { deleteFirebase } from "../../../api/FirebaseApi/deleteFirebase";
 import { resetNotificationState } from "../../../helpers/resetNotificationState";
 
@@ -25,6 +26,9 @@ const YoutubeItemPlaylist: React.FC<{
   const isLive = obj.duration === "P0D" ? true : false;
 
   const router = useRouter();
+  const { user } = useAuth();
+
+  const uid = user?.uid;
 
   const goToTheVideoPage = () => {
     router.push(`/watch/${obj.videoId}`);
@@ -42,7 +46,7 @@ const YoutubeItemPlaylist: React.FC<{
     e.stopPropagation();
     resetNotificationState(setIsNotification);
     setIsDeleted(true);
-    await deleteFirebase(obj.id);
+    await deleteFirebase(obj.id, uid);
     setDependancy(obj.videoId);
   };
 

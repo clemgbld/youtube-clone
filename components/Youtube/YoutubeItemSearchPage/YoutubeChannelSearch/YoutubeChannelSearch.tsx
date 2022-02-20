@@ -23,8 +23,6 @@ const YoutubeChannelSearch: React.FC<{
     ? data?.items[0].snippet?.thumbnails?.default?.url
     : "/fallback.PNG";
 
-  console.log(data);
-
   return (
     <>
       {error && !data && <p>{error}</p>}

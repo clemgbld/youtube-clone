@@ -1,15 +1,29 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import classes from "../../styles/WatchLaterPage.module.css";
 import { LaterTransformed } from "../../interface/laterInterface";
 import { useFireBase } from "../../hooks/use-firebase";
+import { useAuth } from "../../store/auth";
+import { useRouter } from "next/router";
 import YoutubeSideBar from "../../components/Youtube/YoutubeSideBar/YoutubeSideBar";
 import YoutubeItemPlaylist from "../../components/Youtube/YoutubeItemPlaylist/YoutubeItemPlaylist";
+import SpinnerBig from "../../components/UI/Spinner/SpinnerBig/SpinnerBig";
 import Head from "next/head";
 
 const WatchLaterPage: React.FC = () => {
+  const { user } = useAuth();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!user) {
+      router.replace("/");
+    }
+  }, [user, router]);
+
+  const uid = user?.uid;
+
   const [dependancy, setDependancy] = useState("");
 
-  const { data, error } = useFireBase(dependancy);
+  const { data, error, isLoading } = useFireBase(dependancy, uid);
 
   const thumbnail = data ? data[0]?.img : "";
   const videosLength = data?.length;
@@ -28,6 +42,7 @@ const WatchLaterPage: React.FC = () => {
         />
       </Head>
       {error && !data && <p>{error}</p>}
+
       {data?.length < 1 && (
         <p className={classes["no-videos"]}>
           no videos added to the playlist yet.
@@ -48,6 +63,11 @@ const WatchLaterPage: React.FC = () => {
             setDependancy={setDependancy}
           />
         ))}
+      {isLoading && (
+        <div className={classes["no-videos"]}>
+          <SpinnerBig />
+        </div>
+      )}
     </div>
   );
 };

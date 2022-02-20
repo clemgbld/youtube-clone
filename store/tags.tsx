@@ -12,12 +12,6 @@ const TagsProvider: FC = ({ children }) => {
   const [activeTag, setActiveTag] = useState("jazz");
   const [tags, setTags] = useState<string[]>([]);
 
-  useEffect(() => {
-    if (tags.length > 15) {
-      setTags((prevState) => prevState.slice(1));
-    }
-  }, [tags.length]);
-
   const goToSelectedTag = (tagText: string) => setActiveTag(tagText);
 
   const addTag = (tagText: string) => {

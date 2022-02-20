@@ -10,8 +10,6 @@ export const loadMoreYoutubePages = async (
   try {
     const response = await apiYoutube.get(endPoint, params);
 
-    console.log(response.data);
-
     setNextPageToken(response.data.nextPageToken);
     setItems((prevState: any) => {
       if (!prevState) return;
@@ -20,6 +18,8 @@ export const loadMoreYoutubePages = async (
     });
   } catch (err) {
     if (err) {
+      console.log(err);
+
       console.log(err);
     }
   }

@@ -1,17 +1,19 @@
 import { useEffect, useState } from "react";
 import apiFirebase from "../api/FirebaseApi/apiFirebase";
 
-export const useFireBase = (dependency: string | string[] | undefined) => {
+export const useFireBase = (
+  dependency: string | string[] | undefined,
+  uid: string | undefined
+) => {
   const [data, setData] = useState<any>(null);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    console.log(dependency);
     const ac = new AbortController();
     const getFireBaseData = async () => {
       try {
-        const res = await apiFirebase.get("/later.json");
+        const res = await apiFirebase.get(`/later/${uid}.json`);
 
         const data = res.data;
 

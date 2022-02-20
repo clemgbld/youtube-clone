@@ -10,6 +10,7 @@ import { deleteFirebase } from "../../../../api/FirebaseApi/deleteFirebase";
 import { useFireBase } from "../../../../hooks/use-firebase";
 import { resetNotificationState } from "../../../../helpers/resetNotificationState";
 import { useRouter } from "next/router";
+import { useAuth } from "../../../../store/auth";
 
 const textAdd = "video added to playlist 'Watch later";
 const textDelete = "video deleted from playlist 'Watch later";
@@ -19,6 +20,10 @@ const YoutubeWatchLater: React.FC<{
   isImage: boolean;
   showIcon?: boolean;
 }> = ({ obj, isImage, showIcon }) => {
+  const { user } = useAuth();
+
+  const uid = user?.uid;
+
   const router = useRouter();
   const videoID = router.query.videoID;
 
@@ -28,9 +33,7 @@ const YoutubeWatchLater: React.FC<{
   const [isNotificationDelete, setIsNotificationDelete] = useState(false);
   const [isNotificationError, setIsNotificationError] = useState(false);
 
-  const { data, error } = useFireBase(videoID);
-
-  console.log(data);
+  const { data, error } = useFireBase(videoID, uid);
 
   useEffect(() => {
     if (error) {
@@ -54,14 +57,14 @@ const YoutubeWatchLater: React.FC<{
 
   const sendData = (e: React.MouseEvent<HTMLDivElement>) => {
     e.stopPropagation();
-    postFirebase(obj);
+    postFirebase(obj, uid);
     setIsSaved(true);
     resetNotificationState(setIsNotificationAdd);
   };
 
   const deleteData = (e: React.MouseEvent<HTMLDivElement>) => {
     e.stopPropagation();
-    deleteFirebase(currentId);
+    deleteFirebase(currentId, uid);
     setIsSaved(false);
     resetNotificationState(setIsNotificationDelete);
   };

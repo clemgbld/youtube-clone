@@ -34,10 +34,6 @@ const WatchPage: React.FC = () => {
 
   const isLive = liveBroadcastContent === "live";
 
-  console.log(isLive);
-
-  console.log(data);
-
   return (
     <div className={classes.container}>
       <Head>

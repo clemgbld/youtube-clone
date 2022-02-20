@@ -4,12 +4,15 @@ import CompassIcon from "../../../../UI/VerticalIcons/CompassIcon";
 import ClockIcon from "../../../../UI/VerticalIcons/ClockIcon";
 import VerticalEndpoint from "./VerticalEndpoint/VerticalEndpoint";
 import LogoutButton from "../LogoutButton/LogoutButton";
+import { useAuth } from "../../../../../store/auth";
 
 const homePath = "/";
 const explorerPath = "/explorer";
 const laterPath = "/later";
 
 const VerticalNav: React.FC = () => {
+  const { user } = useAuth();
+
   return (
     <header className={classes.header}>
       <nav className={classes.flex}>
@@ -21,10 +24,12 @@ const VerticalNav: React.FC = () => {
           <CompassIcon />
           <p className={classes.text}>Explorer</p>
         </VerticalEndpoint>
-        <VerticalEndpoint path={laterPath}>
-          <ClockIcon />
-          <p className={classes.text}>Watch Later</p>
-        </VerticalEndpoint>
+        {user && (
+          <VerticalEndpoint path={laterPath}>
+            <ClockIcon />
+            <p className={classes.text}>Watch Later</p>
+          </VerticalEndpoint>
+        )}
         <LogoutButton size="small" />
       </nav>
     </header>

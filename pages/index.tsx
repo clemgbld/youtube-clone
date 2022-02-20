@@ -28,8 +28,6 @@ const HomePage: React.FC<{
     },
   };
 
-  console.log(pageToken);
-
   const nextPageHandler = () => {
     loadMoreYoutubePages(paramsNext, "/videos", setItems, setNextPageToken);
   };

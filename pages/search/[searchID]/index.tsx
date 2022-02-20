@@ -29,8 +29,6 @@ const SearchPage: React.FC = () => {
 
   const { data, error } = useYoutube("/search", params, searchTerm);
 
-  console.log(data);
-
   useEffect(() => {
     setNextPageToken(data?.nextPageToken);
 

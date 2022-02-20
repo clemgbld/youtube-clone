@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useAuth } from "../../../../store/auth";
 import { formatDuration } from "../../../../helpers/formatStats";
 import classes from "./YoutubeImage.module.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -32,6 +33,8 @@ const YoutubeImage: React.FC<{
       : classes.duration
   }`;
 
+  const { user } = useAuth();
+
   const [showIcon, setShowIcon] = useState(false);
 
   const showIconHandler = () => {
@@ -48,7 +51,7 @@ const YoutubeImage: React.FC<{
       onMouseLeave={hideIconHandler}
       className={classes.container}
     >
-      {obj && (
+      {obj && user && (
         <YoutubeWatchLater obj={obj} isImage={true} showIcon={showIcon} />
       )}
       <LazyLoadImage

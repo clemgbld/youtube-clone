@@ -6,6 +6,7 @@ import YoutubeCommentItem from "./YoutubeCommentItem/YoutubeCommentItem";
 import { ItemComment } from "../../../interface/youtubeItemInterface";
 import YoutubeCommentCount from "./YoutubeCommentsCount/YoutubeCommentCount";
 import { loadMoreYoutubePages } from "../../../api/YoutubeApi/loadMoreYoutubePages";
+import SpinnerBig from "../../UI/Spinner/SpinnerBig/SpinnerBig";
 
 const YoutubeComments: React.FC<{
   videoId: string | string[] | undefined;
@@ -13,6 +14,7 @@ const YoutubeComments: React.FC<{
 }> = ({ videoId, commentCount }) => {
   const [items, setItems] = useState<ItemComment[]>([]);
   const [nextPageToken, setNextPageToken] = useState<string>("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const params = {
     params: {
@@ -49,13 +51,14 @@ const YoutubeComments: React.FC<{
 
   const nextPageHandler = () => {
     if (isStillVideosToLoad) {
+      setIsLoading(true);
       loadMoreYoutubePages(
         paramsNext,
         "/commentThreads",
         setItems,
         setNextPageToken
       );
-      console.log(items);
+      setIsLoading(false);
     }
   };
 
@@ -68,9 +71,16 @@ const YoutubeComments: React.FC<{
         items.map((item: ItemComment) => (
           <YoutubeCommentItem item={item} key={item.id} />
         ))}
-      <button onClick={nextPageHandler} className={classes.btn}>
-        LOAD MORE COMMENTS
-      </button>
+      {isLoading && (
+        <div className={classes["spinner-container"]}>
+          <SpinnerBig />
+        </div>
+      )}
+      {isStillVideosToLoad && (
+        <button onClick={nextPageHandler} className={classes.btn}>
+          LOAD MORE COMMENTS
+        </button>
+      )}
     </div>
   );
 };

@@ -4,13 +4,21 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  padding-top: 2rem;
   padding: 1.6rem;
   top: 5.6rem;
-  width: 100%;
+  width: 100vw;
   height: 5.6rem;
   background: rgba(48, 48, 48, 0.95);
   border-top: 1px solid #767676;
   z-index: 5;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+.container::-webkit-scrollbar,
+.container-bignav::-webkit-scrollbar {
+  display: none;
 }
 
 .container {

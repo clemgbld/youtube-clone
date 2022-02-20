@@ -14,6 +14,8 @@ const YoutubeShare: React.FC = () => {
 
   const path = `${pathname.replace("[videoID]", "")}${videoID}`;
 
+  const fullPath = `https://youtube-clone-vert.vercel.app${path}`;
+
   const text = "Link copied in the clipboard";
 
   const [isOpen, setIsOpen] = useState(false);
@@ -28,7 +30,7 @@ const YoutubeShare: React.FC = () => {
   };
 
   const copyToClipBoard = () => {
-    navigator.clipboard.writeText(`http://localhost:3000${path}`);
+    navigator.clipboard.writeText(fullPath);
     resetNotificationState(setIsNotification);
   };
 
@@ -43,7 +45,7 @@ const YoutubeShare: React.FC = () => {
               <input
                 className={classes.input}
                 type="text"
-                value={`http://localhost:3000${path}`}
+                value={fullPath}
                 readOnly
               />
               <button onClick={copyToClipBoard} className={classes.copy}>
