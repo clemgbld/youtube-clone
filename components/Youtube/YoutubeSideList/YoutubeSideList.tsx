@@ -19,7 +19,7 @@ const YoutubeSideList: React.FC<{ searchTerm: string; id: string }> = ({
     params: {
       part: "snippet",
       pageToken: "",
-      maxResults: 20,
+      maxResults: 50,
       q: searchTerm,
       key: KEY,
       type: "video",
@@ -40,7 +40,7 @@ const YoutubeSideList: React.FC<{ searchTerm: string; id: string }> = ({
     params: {
       part: "snippet",
       pageToken: nextPageToken,
-      maxResults: 20,
+      maxResults: 50,
       q: searchTerm,
       key: KEY,
       type: "video",

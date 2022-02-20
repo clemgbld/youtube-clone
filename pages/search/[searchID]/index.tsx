@@ -20,7 +20,7 @@ const SearchPage: React.FC = () => {
     params: {
       part: "snippet",
       pageToken: "",
-      maxResults: 20,
+      maxResults: 50,
       q: searchTerm,
       key: KEY,
       type: "video",
@@ -41,7 +41,7 @@ const SearchPage: React.FC = () => {
     params: {
       part: "snippet",
       pageToken: nextPageToken,
-      maxResults: 20,
+      maxResults: 50,
       q: searchTerm,
       key: KEY,
       type: "video",

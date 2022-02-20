@@ -26,7 +26,7 @@ const TagsPage: React.FC = () => {
     params: {
       part: "snippet",
       pageToken: "",
-      maxResults: 20,
+      maxResults: 50,
       q: activeTag,
       key: KEY,
       type: "video",
@@ -46,7 +46,7 @@ const TagsPage: React.FC = () => {
     params: {
       part: "snippet",
       pageToken: nextPageToken,
-      maxResults: 20,
+      maxResults: 50,
       q: activeTag,
       key: KEY,
       type: "video",
