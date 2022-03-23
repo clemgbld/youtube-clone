@@ -50,7 +50,7 @@ const Layout: React.FC = (props) => {
       {showVerticalNav && !isBigNavOpen && <VerticalNav />}
       {isBigNavOpen && <VerticalNavBig />}
       {isBigNavOpen && !watchPath && <Overlay />}
-      <div className={classLayout}>{props.children}</div>
+      <main className={classLayout}>{props.children}</main>
     </>
   );
 };

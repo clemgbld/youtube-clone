@@ -14,7 +14,7 @@ const VerticalNav: React.FC = () => {
   const { user } = useAuth();
 
   return (
-    <header className={classes.header}>
+    <div className={classes.header}>
       <nav className={classes.flex}>
         <VerticalEndpoint path={homePath}>
           <HomeIcon />
@@ -32,7 +32,7 @@ const VerticalNav: React.FC = () => {
         )}
         <LogoutButton size="small" />
       </nav>
-    </header>
+    </div>
   );
 };
 
